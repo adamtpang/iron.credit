@@ -3,6 +3,7 @@ import { useTheme } from "./theme.jsx";
 import Landing from "./Landing.jsx";
 import Investors from "./Investors.jsx";
 import RFS from "./RFS.jsx";
+import Credit from "./Credit.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
@@ -27,6 +28,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/investors" element={<Investors />} />
         <Route path="/rfs" element={<RFS />} />
+        <Route path="/credit" element={<Credit />} />
       </Routes>
       <FloatingActions />
     </div>
