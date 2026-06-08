@@ -1,4 +1,4 @@
-# BTCSave: project context
+# Iron: project context
 
 **What:** "Acorns for Bitcoin" in Southeast Asia. Automated weekly BTC dollar-cost-averaging through local e-wallets (GCash/DANA/MoMo), landing in self-custody. A *savings* product, not an exchange.
 
@@ -7,7 +7,7 @@
 **Founders:** Adam (Network School network = beachhead users) + Christian (global Bitcoin community). Both technical operators. Pre-empt the compliance gap by integrating a licensed rail (for example IBEX), staying non-custodial.
 
 ## Positioning decisions (locked)
-- **Name:** BTCSave (domain btcsave.app). The project folder is still named satsave.app; rename later if desired.
+- **Name:** Iron (domain iron.credit). Product pivoted from a bitcoin savings app to a non-custodial bitcoin-backed credit card ("keep your bitcoin, spend dollars"). Project folder still named satsave.app.
 - **Launch market: Philippines first** (BSP-regulated, GCash 81M users, $35.6B/yr remittances), then Indonesia, then Vietnam.
 - **Wedge:** radical simplicity (one job: recurring buy) + self-custody by default + multi-rail.
 - **Closest competitor: Pouch.ph** (PH-only, non-custodial, Lightning, 1% fee). Also Coins.ph, Maya, Pintu (ID, has Auto-DCA).

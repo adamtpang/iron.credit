@@ -59,7 +59,7 @@ export default function Investors() {
       <Nav right={navRight} />
       <div style={{ maxWidth: 1080, margin: "0 auto", padding: "8px 18px 40px" }}>
         <div style={{ marginBottom: 16 }}>
-          <h1 className="disp" style={{ fontSize: "clamp(24px,3.2vw,32px)", fontWeight: 800, color: C.ink, letterSpacing: "-.01em", margin: "0 0 4px" }}>BTCSave for investors</h1>
+          <h1 className="disp" style={{ fontSize: "clamp(24px,3.2vw,32px)", fontWeight: 800, color: C.ink, letterSpacing: "-.01em", margin: "0 0 4px" }}>Iron for investors</h1>
           <p style={{ color: C.mut, fontSize: 14 }}>The interactive model behind the savings app. Move the levers.</p>
         </div>
 

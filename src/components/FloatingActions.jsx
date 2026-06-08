@@ -11,7 +11,7 @@ export default function FloatingActions() {
 
   const sendFeedback = () => {
     if (!text.trim()) return;
-    const msg = encodeURIComponent("BTCSave feedback: " + text.trim());
+    const msg = encodeURIComponent("Iron feedback: " + text.trim());
     window.open(`https://wa.me/${WHATSAPP}?text=${msg}`, "_blank", "noopener");
     setText("");
     setOpen(false);

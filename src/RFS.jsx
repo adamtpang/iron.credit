@@ -75,7 +75,7 @@ export default function RFS() {
           <p className="body" style={{ fontSize: 16.5, lineHeight: 1.6, color: C.mut, margin: "0 0 6px" }}>
             In the tradition of sharing the ideas we would most like to see built. This list is specific to bitcoin, and it is written through one filter that changed our minds about almost everything.
           </p>
-          <p className="body" style={{ fontSize: 13, color: C.mut, marginTop: 14 }}>By BTCSave · June 2026</p>
+          <p className="body" style={{ fontSize: 13, color: C.mut, marginTop: 14 }}>By Iron · June 2026</p>
         </div>
 
         {/* The filter */}
@@ -110,7 +110,7 @@ export default function RFS() {
               <span style={{ fontSize: 10.5, fontWeight: 700, letterSpacing: ".08em", textTransform: "uppercase", color: C.amber, border: `1px solid ${C.amber}`, borderRadius: 999, padding: "2px 8px" }}>{idea.tier}</span>
             </div>
             <h3 className="disp" style={{ fontSize: "clamp(22px, 3.2vw, 28px)", fontWeight: 800, lineHeight: 1.12, letterSpacing: "-.01em", color: C.ink, margin: "0 0 6px" }}>{idea.title}</h3>
-            <div style={{ color: C.mut, fontSize: 13, marginBottom: 16 }}>By BTCSave</div>
+            <div style={{ color: C.mut, fontSize: 13, marginBottom: 16 }}>By Iron</div>
             {idea.paras.map((p, i) => (
               <p key={i} className="body" style={{ fontSize: 16, lineHeight: 1.65, color: C.ink, margin: "0 0 14px" }}>{p}</p>
             ))}
@@ -145,13 +145,13 @@ export default function RFS() {
             Every moat on this list is trust, integrations, regulation, and data. None of them is a token. A company whose only product is a token, and especially an AI token, has no defensibility in this space. Build switching costs, not tickers.
           </p>
           <p className="body" style={{ fontSize: 16, lineHeight: 1.65, color: C.ink, margin: 0 }}>
-            We are building BTCSave at the intersection of the savings wedge and the inheritance moat, with a stablecoin spend-and-remit layer so we are not on the wrong side of the filter. The rest of this list is open. If you are building any of it, we would like to talk.
+            We are building Iron, the non-custodial bitcoin credit card. The rest of this list is open, and if you are building any of it, we would like to talk.
           </p>
         </section>
 
         {/* Footer */}
         <div style={{ paddingTop: 20, borderTop: `1px solid ${C.line}`, color: C.mut, fontSize: 13, lineHeight: 1.6 }}>
-          Compiled June 2026 for the bitcoin workshop. Full research and sources live in the BTCSave repo. <Link to="/" style={{ color: C.amber, fontWeight: 600 }}>btcsave.app</Link>
+          Compiled June 2026 for the bitcoin workshop. Full research and sources live in the Iron repo. <Link to="/" style={{ color: C.amber, fontWeight: 600 }}>iron.credit</Link>
         </div>
       </article>
     </div>

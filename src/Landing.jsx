@@ -51,10 +51,10 @@ export default function Landing() {
   ];
 
   const faqs = [
-    ["Is my bitcoin safe?", "Yes. Your bitcoin lands in self-custody, a wallet only you control. BTCSave never takes custody of your funds, so there is no exchange that can freeze or lose them."],
+    ["Is my bitcoin safe?", "Yes. Your bitcoin lands in self-custody, a wallet only you control. Iron never takes custody of your funds, so there is no exchange that can freeze or lose them."],
     ["What does it cost?", "A small, transparent fee on each buy. No hidden spreads and no monthly subscription. You always see exactly what you pay."],
     ["What if I want to stop?", "Pause or cancel any time, instantly. It is your money and your schedule."],
-    ["Do I need to know anything about crypto?", "No. If you can use GCash, you can use BTCSave. We handle the bitcoin part for you."],
+    ["Do I need to know anything about crypto?", "No. If you can use GCash, you can use Iron. We handle the bitcoin part for you."],
     ["Which countries can use it?", "We are launching in the Philippines first, with Indonesia and Vietnam next. Join the list to hear when we reach you."],
   ];
 
@@ -94,7 +94,7 @@ export default function Landing() {
               Stack bitcoin every week.<br />Without thinking about it.
             </h1>
             <p className="body" style={{ fontSize: 16.5, lineHeight: 1.55, color: C.mut, maxWidth: 520, margin: "0 0 22px" }}>
-              BTCSave automatically buys a little bitcoin for you every week, straight from GCash, DANA, or MoMo. It lands in a wallet only you control. No trading, no charts, just saving.
+              Iron automatically buys a little bitcoin for you every week, straight from GCash, DANA, or MoMo. It lands in a wallet only you control. No trading, no charts, just saving.
             </p>
             <WaitlistForm C={C} big />
             <div className="flex items-center" style={{ gap: 8, marginTop: 16, color: C.mut, fontSize: 12.5 }}>
@@ -157,7 +157,7 @@ export default function Landing() {
 
       {/* WHY */}
       <section style={{ maxWidth: 1080, margin: "0 auto", padding: "30px 18px" }}>
-        <h2 className="disp" style={{ fontSize: 13, color: C.mut, textTransform: "uppercase", letterSpacing: ".12em", margin: "0 0 18px" }}>Why BTCSave</h2>
+        <h2 className="disp" style={{ fontSize: 13, color: C.mut, textTransform: "uppercase", letterSpacing: ".12em", margin: "0 0 18px" }}>Why Iron</h2>
         <div className="grid feat-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14 }}>
           {features.map(([Icon, t, d], i) => (
             <div key={i} className="flex" style={{ gap: 14, background: C.panel, border: `1px solid ${C.line}`, borderRadius: 18, padding: 20, alignItems: "flex-start" }}>
@@ -224,7 +224,7 @@ export default function Landing() {
             <div style={{ width: 26, height: 26, borderRadius: 8, background: `linear-gradient(145deg, ${C.amber}, #c96f0c)`, display: "grid", placeItems: "center" }}>
               <Bitcoin size={15} color="#1a0f00" strokeWidth={2.4} />
             </div>
-            <span className="disp" style={{ fontWeight: 800, fontSize: 15, color: C.ink }}>BTCSave</span>
+            <span className="disp" style={{ fontWeight: 800, fontSize: 15, color: C.ink }}>Iron</span>
             <span style={{ color: C.mut, fontSize: 12.5 }}>· Stack bitcoin every week.</span>
           </div>
           <div className="flex items-center" style={{ gap: 18, fontSize: 13, color: C.mut }}>
@@ -234,7 +234,7 @@ export default function Landing() {
           </div>
         </div>
         <div style={{ textAlign: "center", color: C.mut, fontSize: 11, paddingBottom: 22 }}>
-          Bitcoin is volatile. This is not financial advice. © 2026 BTCSave.
+          Bitcoin is volatile. This is not financial advice. © 2026 Iron.
         </div>
       </footer>
     </div>

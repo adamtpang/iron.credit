@@ -25,7 +25,8 @@ export default function App() {
         .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
       `}</style>
       <Routes>
-        <Route path="/" element={<Landing />} />
+        <Route path="/" element={<Credit />} />
+        <Route path="/savings" element={<Landing />} />
         <Route path="/investors" element={<Investors />} />
         <Route path="/rfs" element={<RFS />} />
         <Route path="/credit" element={<Credit />} />

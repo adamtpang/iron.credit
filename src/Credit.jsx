@@ -106,7 +106,7 @@ export default function Credit() {
           <p className="body" style={{ fontSize: 17, lineHeight: 1.55, color: C.mut, maxWidth: 620, margin: 0 }}>
             Borrow dollars against your bitcoin and spend anywhere, without selling and without a credit check. For the people who hold bitcoin, and the people the banks turned away. Chase for BTC and USDT.
           </p>
-          <p className="body" style={{ fontSize: 12.5, color: C.mut, marginTop: 14 }}>Aether Pte Ltd, Singapore.</p>
+          <p className="body" style={{ fontSize: 12.5, color: C.mut, marginTop: 14 }}>Iron · Singapore</p>
         </div>
 
         {/* Problem */}
