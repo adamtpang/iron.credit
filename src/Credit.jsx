@@ -149,6 +149,11 @@ export default function Credit() {
           <div className="credit-3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12 }}>
             {PRINCIPLES.map(([Icon, t, b], i) => <Card key={i} icon={Icon} title={t} body={b} />)}
           </div>
+          <div style={{ marginTop: 14 }}>
+            <Link to="/how" className="flex items-center" style={{ gap: 7, color: C.amber, fontSize: 14.5, fontWeight: 600 }}>
+              See exactly how it works, step by step <ArrowRight size={16} />
+            </Link>
+          </div>
         </section>
 
         {/* Who it is for */}

@@ -6,6 +6,7 @@ import RFS from "./RFS.jsx";
 import Credit from "./Credit.jsx";
 import Design from "./Design.jsx";
 import Pricing from "./Pricing.jsx";
+import How from "./How.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/credit" element={<Credit />} />
         <Route path="/design" element={<Design />} />
         <Route path="/pricing" element={<Pricing />} />
+        <Route path="/how" element={<How />} />
       </Routes>
       <FloatingActions />
     </div>
