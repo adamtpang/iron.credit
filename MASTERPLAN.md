@@ -6,6 +6,25 @@
 
 ---
 
+## The Iron Master Plan (just between you and me)
+
+*In the spirit of Elon's 2006 "Secret Tesla Motors Master Plan": a short cascade where each step funds the next. He ended his with "Don't tell anyone." Ours is built on radical transparency, so we end it the other way.*
+
+The overarching purpose of Iron is to let people keep their bitcoin and still live: make bitcoin spendable without selling it, and extend credit to the people the banks turned away. The card is the means, not the mission.
+
+1. **Build the secured card.** Let bitcoiners borrow dollars against their bitcoin and spend anywhere, without selling, at a fair rate.
+2. **Use that interest income and repayment data** to safely say yes to the people the banks reject.
+3. **Use that to graduate** trusted users from secured credit to unsecured revolving credit, plus accounts and savings: the full bitcoin bank.
+4. **While doing all of the above,** stay non-custodial, keep the financials radically open, and add more assets and more markets over time.
+
+Each step pays for the next. The premium product funds the inclusive one, and the inclusive one funds the bank.
+
+Every lender that came before made you trust them, then betrayed you (Celsius, BlockFi, FTX). We are building the opposite: a bank you do not have to trust, because you can see and hold everything.
+
+**Tell everyone.**
+
+---
+
 ## 0. The frame: why this can be enormous
 
 The billionaire pattern is one sentence: **concentrated equity in one entity riding a multi-decade macro tailwind, held 15+ years, voting control kept the whole way.** The trillion-scale version of that sentence for me is: own the credit and banking layer of a hyperbitcoinizing world. Credit-led companies are already the most valuable in finance (JPMorgan ~$837B, Visa, Amex, Nubank ~$55-60B as the fintech comp). If bitcoin becomes the global reserve asset, the company that turns it into credit is a Visa-plus-JPMorgan-scale outcome ($500B to $1T+ in the limit). Trillion is the limit case, and it requires the macro to arrive **and** me to hold control for 25 years. Both are within my control to bet on.
@@ -160,3 +179,23 @@ Almost every $100M+ exit is someone who could have been a billionaire but sold b
 - Cofounder trial run.
 
 *Now ship.*
+
+---
+
+## 10. The personal scoreboard: income and speed over time
+
+The whole point of this vehicle is to maximize my income and my speed in life. Here is how the company milestones map to both. **Illustrative, dilution-dependent, high variance (most startups fail). Numbers assume I keep dual-class control and resist selling early.**
+
+| Stage | ~When | Company | My cash pay | My equity (paper) | Liquidity I can spend | Speed / freedom in life |
+|---|---|---|---|---|---|---|
+| Solo build | now-6mo | MVP, waitlist, first pilots, pre-revenue | ~$0 (savings) | ~100% of ~$0 | none | Lowest freedom, max intensity. Speed = learning velocity. |
+| Pre-seed | 6-12mo | team 2-4, PH pilots, tiny book | ~$40-80k | ~65-75% of ~$5-10M ≈ $4-7M | none (illiquid) | Capital buys time: hire, delegate. Momentum high. |
+| Seed | yr 1-2 | real users, book + revenue forming | ~$80-150k | ~45-60% of ~$20-40M ≈ $10-22M | mostly illiquid | I run a team, not a to-do list. Runway secure. |
+| Series A | yr 2-3 | PMF, scaling book + revenue | ~$150-250k | ~35-50% of ~$60-150M ≈ $25-60M | first secondary ~$0.5-2M | Inflection: home, zero money stress, fund my own bets. |
+| Series B/C | yr 3-6 | category leader, multi-market | ~$250-500k+ | ~25-40% of ~$0.3-1B ≈ $80-350M | secondaries $2-10M | Rich by any normal measure. Near-total optionality. |
+| Growth / pre-IPO | yr 6-10 | the bitcoin Chase emerging, profitable | $0.5-1M+ | ~18-30% of $3-20B ≈ $0.5-5B+ | ~1%/yr, large | Paper billionaire if it works. Any door opens. |
+| IPO / dominance | yr 10+ | $50B-$1T limit case | irrelevant | dual-class control of a giant | liquid, but I hold | Total optionality. I build by choice, not need. |
+
+**The flywheel that ties income and speed together:** execution speed produces milestones, milestones produce valuation, valuation produces my wealth, wealth buys back my time (delegation, tools, access, removing friction), and bought-back time produces more execution speed. Money is stored speed. The faster I hit each milestone, the faster the whole personal curve inflects.
+
+**The honest tradeoff:** in the first 1-2 years a startup *lowers* my freedom (it is all-consuming) in exchange for a shot at maximizing it later. I pay speed now to buy far more speed later. The two ways to not get crushed by that: (1) take partial secondaries from Series A on, converting paper wealth into real freedom *without* losing control or upside (the Bezos ~1%/yr model), and (2) remember the floor: even if Iron fails, I come out with elite specific knowledge, a dense network, and a stronger next swing. The downside is capped, the upside is not.
