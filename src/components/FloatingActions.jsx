@@ -41,7 +41,7 @@ export default function FloatingActions() {
             <textarea value={text} onChange={(e) => setText(e.target.value)} rows={4} placeholder="Your feedback..."
               style={{ width: "100%", padding: "12px 14px", borderRadius: 11, border: `1px solid ${C.line}`, background: C.panel2, color: C.ink, fontSize: 14, outline: "none", resize: "vertical", fontFamily: "inherit", boxSizing: "border-box" }} />
             <button onClick={sendFeedback} disabled={!text.trim()}
-              style={{ marginTop: 12, width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px", borderRadius: 11, border: "none", background: text.trim() ? `linear-gradient(145deg, ${C.amber}, #d97a06)` : C.line, color: text.trim() ? "#1a0f00" : C.mut, fontSize: 14, fontWeight: 700, cursor: text.trim() ? "pointer" : "default" }}>
+              style={{ marginTop: 12, width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 8, padding: "12px", borderRadius: 11, border: "none", background: text.trim() ? C.amber : C.line, color: text.trim() ? C.accentInk : C.mut, fontSize: 14, fontWeight: 700, cursor: text.trim() ? "pointer" : "default" }}>
               <Send size={15} /> Send via WhatsApp
             </button>
           </div>

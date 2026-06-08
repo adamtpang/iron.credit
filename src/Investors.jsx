@@ -73,7 +73,7 @@ export default function Investors() {
               <div className="flex" style={{ gap: 6 }}>
                 {Object.entries(MARKETS).map(([k, v]) => (
                   <button key={k} onClick={() => setMarket(k)}
-                    style={{ border: `1px solid ${market === k ? C.amber : C.line}`, background: market === k ? "rgba(247,147,26,.12)" : "transparent", borderRadius: 9, padding: "5px 9px", cursor: "pointer", fontSize: 14 }}>
+                    style={{ border: `1px solid ${market === k ? C.amber : C.line}`, background: market === k ? C.accentSoft : "transparent", borderRadius: 9, padding: "5px 9px", cursor: "pointer", fontSize: 14 }}>
                     {v.flag}
                   </button>
                 ))}
@@ -104,7 +104,7 @@ export default function Investors() {
               <div className="flex" style={{ gap: 6, marginBottom: 12 }}>
                 {PRESETS.map((p) => (
                   <button key={p.key} onClick={() => { setUsers(p.users); setBizWeekly(p.weekly); }}
-                    style={{ flex: 1, border: `1px solid ${activePreset === p.key ? C.amber : C.line}`, background: activePreset === p.key ? "rgba(247,147,26,.12)" : "transparent", color: activePreset === p.key ? C.ink : C.mut, borderRadius: 9, padding: "8px 9px", cursor: "pointer", fontSize: 12, fontWeight: 600, textAlign: "left" }}>
+                    style={{ flex: 1, border: `1px solid ${activePreset === p.key ? C.amber : C.line}`, background: activePreset === p.key ? C.accentSoft : "transparent", color: activePreset === p.key ? C.ink : C.mut, borderRadius: 9, padding: "8px 9px", cursor: "pointer", fontSize: 12, fontWeight: 600, textAlign: "left" }}>
                     {p.label}
                     <div style={{ fontWeight: 400, fontSize: 10.5, marginTop: 2, color: C.mut }}>{num(p.users)} × {usd0(p.weekly)}/wk</div>
                   </button>

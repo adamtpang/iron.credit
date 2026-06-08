@@ -4,6 +4,7 @@ import Landing from "./Landing.jsx";
 import Investors from "./Investors.jsx";
 import RFS from "./RFS.jsx";
 import Credit from "./Credit.jsx";
+import Design from "./Design.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
@@ -16,9 +17,9 @@ export default function App() {
       transition: "background .3s ease, color .3s ease",
     }}>
       <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Spline+Sans:wght@400;500;600;700&display=swap');
-        .disp{font-family:'Bricolage Grotesque',serif;} .body{font-family:'Spline Sans',sans-serif;}
-        .tnum{font-variant-numeric:tabular-nums;}
+        @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..800&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+        .disp{font-family:'Bodoni Moda',serif;} .body{font-family:'Hanken Grotesk',sans-serif;}
+        .tnum{font-variant-numeric:tabular-nums;} .mono{font-family:'IBM Plex Mono',monospace;font-variant-numeric:tabular-nums;}
         a{color:inherit;text-decoration:none;}
         a:hover{opacity:.82;}
         @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
@@ -30,6 +31,7 @@ export default function App() {
         <Route path="/investors" element={<Investors />} />
         <Route path="/rfs" element={<RFS />} />
         <Route path="/credit" element={<Credit />} />
+        <Route path="/design" element={<Design />} />
       </Routes>
       <FloatingActions />
     </div>

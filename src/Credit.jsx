@@ -73,7 +73,7 @@ export default function Credit() {
   const Card = ({ icon: Icon, title, body }) => (
     <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 16, padding: 18 }}>
       {Icon && (
-        <div style={{ width: 36, height: 36, borderRadius: 10, background: "rgba(247,147,26,.12)", display: "grid", placeItems: "center", marginBottom: 12 }}>
+        <div style={{ width: 36, height: 36, borderRadius: 10, background: C.accentSoft, display: "grid", placeItems: "center", marginBottom: 12 }}>
           <Icon size={18} color={C.amber} />
         </div>
       )}
@@ -127,7 +127,7 @@ export default function Credit() {
             {FLOW.map(([Icon, t, b], i) => (
               <div key={i} style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 16, padding: 16 }}>
                 <div className="flex items-center" style={{ justifyContent: "space-between", marginBottom: 10 }}>
-                  <div style={{ width: 34, height: 34, borderRadius: 9, background: "rgba(247,147,26,.12)", display: "grid", placeItems: "center" }}>
+                  <div style={{ width: 34, height: 34, borderRadius: 9, background: C.accentSoft, display: "grid", placeItems: "center" }}>
                     <Icon size={17} color={C.amber} />
                   </div>
                   <span className="disp tnum" style={{ fontSize: 22, fontWeight: 800, color: C.line }}>{i + 1}</span>

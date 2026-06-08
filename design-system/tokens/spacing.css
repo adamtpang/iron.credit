@@ -1,0 +1,54 @@
+/* ============================================================
+   IRON — Spacing, radius, shadow, motion
+   Iron is sharp and architectural: tight radii, crisp hairlines,
+   deep restrained shadows. Generous negative space.
+   ============================================================ */
+
+:root {
+  /* --- Spacing scale (px) --- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-7: 32px;
+  --space-8: 40px;
+  --space-9: 56px;
+  --space-10: 72px;
+  --space-12: 96px;
+  --space-16: 128px;
+
+  /* --- Radii — small and crisp, machined edges --- */
+  --radius-xs:   3px;
+  --radius-sm:   5px;   /* chips, inputs, buttons */
+  --radius-md:   8px;   /* cards, rows */
+  --radius-lg:   12px;  /* panels */
+  --radius-xl:   16px;  /* large surfaces */
+  --radius-card: 14px;  /* the physical card corner ratio */
+  --radius-pill: 999px;
+
+  /* --- Borders --- */
+  --border-width: 1px;
+  --border:        var(--border-width) solid var(--line);
+  --border-strong: var(--border-width) solid var(--line-2);
+
+  /* --- Shadows — deep, soft, low-key (mostly for raised dark UI) --- */
+  --shadow-sm:    0 1px 2px rgba(0, 0, 0, 0.30);
+  --shadow-card:  0 2px 14px rgba(0, 0, 0, 0.34);
+  --shadow-lift:  0 16px 44px rgba(0, 0, 0, 0.46);
+  --shadow-card-heavy: 0 30px 80px rgba(0, 0, 0, 0.55);  /* the Iron card */
+  --shadow-orange: 0 8px 30px rgba(231, 234, 237, 0.10);  /* accent glow (platinum) */
+
+  /* --- Layout --- */
+  --container: 1200px;  /* marketing width */
+  --reading:   720px;   /* prose width */
+  --gutter:    24px;
+
+  /* --- Motion — measured, confident, no bounce --- */
+  --ease-out:  cubic-bezier(0.22, 0.61, 0.20, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1); /* @kind other */
+  --dur-fast:  0.16s; /* @kind other */
+  --dur-base:  0.24s; /* @kind other */
+  --dur-slow:  0.6s; /* @kind other */
+}

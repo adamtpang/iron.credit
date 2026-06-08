@@ -1,17 +1,22 @@
 import { createContext, useContext, useEffect, useState } from "react";
 
+// Iron design system palette: monochrome, premium, dark by default.
+// "amber" is kept as the key name so components need no change; its VALUE
+// is now platinum (dark) / ink (light). accentInk = text/icon on the accent.
 export const PALETTES = {
-  light: {
-    bg: "#faf8f3", panel: "#ffffff", panel2: "#f5f2ea", line: "#e8e3d8",
-    ink: "#191510", mut: "#6c675e", amber: "#f7931a", amber2: "#c2710a", green: "#138a5a",
-    phone: "linear-gradient(180deg,#ffffff,#f6f3ec)",
-    glow1: "rgba(247,147,26,.10)", glow2: "rgba(247,147,26,.05)",
-  },
   dark: {
-    bg: "#0a0a0c", panel: "#121218", panel2: "#16161d", line: "#26262f",
-    ink: "#f4f1e9", mut: "#8d8d99", amber: "#f7931a", amber2: "#ffc46b", green: "#5ee0a0",
-    phone: "linear-gradient(180deg,#0e0e13,#0b0b0f)",
-    glow1: "rgba(247,147,26,.12)", glow2: "rgba(247,147,26,.07)",
+    bg: "#0a0b0d", panel: "#121418", panel2: "#181b20", line: "#282d35",
+    ink: "#f3f5f7", mut: "#939aa4", amber: "#e7eaed", amber2: "#c8cdd2",
+    accentInk: "#0b0c0f", accentSoft: "rgba(231,234,237,.09)", green: "#aeb4b8",
+    phone: "linear-gradient(160deg,#171a1f,#0d0f12)",
+    glow1: "rgba(231,234,237,.05)", glow2: "rgba(231,234,237,.025)",
+  },
+  light: {
+    bg: "#eef0f2", panel: "#ffffff", panel2: "#f4f6f8", line: "#dfe3e7",
+    ink: "#14171b", mut: "#586069", amber: "#16181c", amber2: "#2c313a",
+    accentInk: "#ffffff", accentSoft: "rgba(20,23,28,.06)", green: "#6a7370",
+    phone: "linear-gradient(180deg,#ffffff,#f4f6f8)",
+    glow1: "rgba(20,23,28,.03)", glow2: "rgba(20,23,28,.015)",
   },
 };
 
@@ -20,19 +25,20 @@ const ThemeContext = createContext(null);
 export function ThemeProvider({ children }) {
   const [theme, setTheme] = useState(() => {
     if (typeof localStorage !== "undefined") {
-      const saved = localStorage.getItem("btcsave-theme");
+      const saved = localStorage.getItem("iron-theme");
       if (saved === "light" || saved === "dark") return saved;
     }
-    return "light"; // light mode is the default
+    return "dark"; // Iron is dark by default (premium private-bank aesthetic)
   });
 
   useEffect(() => {
-    if (typeof localStorage !== "undefined") localStorage.setItem("btcsave-theme", theme);
+    if (typeof localStorage !== "undefined") localStorage.setItem("iron-theme", theme);
     document.documentElement.style.colorScheme = theme;
+    document.documentElement.setAttribute("data-theme", theme);
     document.body.style.background = PALETTES[theme].bg;
   }, [theme]);
 
-  const toggle = () => setTheme((t) => (t === "light" ? "dark" : "light"));
+  const toggle = () => setTheme((t) => (t === "dark" ? "light" : "dark"));
 
   return (
     <ThemeContext.Provider value={{ theme, toggle, C: PALETTES[theme] }}>

@@ -1,0 +1,96 @@
+<!-- @dsCard group="Mobile app" viewport="470x920" name="Iron mobile app" subtitle="Non-custodial deposit onboarding, then the dashboard, card, borrow/repay and activity" -->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Iron — mobile</title>
+<link rel="stylesheet" href="../../styles.css">
+<style>
+  html, body { margin: 0; }
+  #stage { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 22px 16px; box-sizing: border-box; }
+  #phone { display: flex; flex-direction: column; align-items: center; gap: 16px; }
+  .rail { display: flex; align-items: center; gap: 8px; }
+  .rail select, .rail button { font-family: var(--font-body); font-size: 13px; color: var(--ink); border: 1px solid var(--line-2); background: var(--surface-2); border-radius: 8px; padding: 8px 11px; cursor: pointer; }
+  .rail button { width: 38px; height: 38px; display: grid; place-items: center; padding: 0; }
+</style>
+</head>
+<body>
+<div id="stage"><div id="phone"></div></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js"></script>
+
+<script src="../dsboot.js"></script>
+<script type="text/babel" src="../website/Icon.jsx"></script>
+<script type="text/babel" src="parts.jsx"></script>
+<script type="text/babel" src="screens.jsx"></script>
+
+<script type="text/babel" data-presets="react">
+  (async () => {
+    window.DS = await window.bootDS("../../components/");
+    const { PhoneShell, StatusBar, HomeBar } = window.MParts;
+    const S = window.MScreens;
+    const LI = window.LI;
+    const FLOW = ["welcome", "vault", "deposit", "app"];
+    const STEP = { vault: 0, deposit: 1 };
+    const LABELS = { welcome: "1 · Welcome", vault: "2 · Vault", deposit: "3 · Deposit", app: "4 · App" };
+
+    function App() {
+      const [theme, setTheme] = React.useState("dark");
+      const [stage, setStage] = React.useState("welcome");
+      const [tab, setTab] = React.useState("home");
+      const [drawn, setDrawn] = React.useState(5600);
+      const btc = 0.412, price = 68000;
+      React.useEffect(() => { document.documentElement.dataset.theme = theme === "light" ? "light" : ""; if (window.lucide) window.lucide.createIcons(); });
+      const idx = FLOW.indexOf(stage);
+      const next = () => setStage(FLOW[Math.min(FLOW.length - 1, idx + 1)]);
+      const back = () => setStage(FLOW[Math.max(0, idx - 1)]);
+      const st = { btc, price, drawn, c: S.compute(btc, price, drawn) };
+
+      let body;
+      if (stage === "welcome") body = <S.Welcome next={next} />;
+      else if (stage === "vault") body = <S.Vault next={next} back={back} step={STEP.vault} steps={2} />;
+      else if (stage === "deposit") body = <S.Deposit next={next} back={back} step={STEP.deposit} steps={2} />;
+      else {
+        const tabs = [["home", "house"], ["card", "credit-card"], ["activity", "list"]];
+        const content = tab === "home" ? <S.Home st={st} setDrawn={setDrawn} setTab={setTab} /> : tab === "card" ? <S.CardScreen st={st} /> : <S.Activity />;
+        body = (
+          <div style={{ display: "flex", flexDirection: "column", flex: 1, minHeight: 0 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "2px 22px 8px", flexShrink: 0 }}>
+              <window.DS.Logo wordmark size={20} />
+              <div style={{ width: 34, height: 34, borderRadius: "var(--radius-sm)", background: "var(--surface-2)", border: "1px solid var(--line)", display: "grid", placeItems: "center" }}><LI name="bell" size={16} color="var(--ink)" /></div>
+            </div>
+            <div style={{ flex: 1, minHeight: 0, overflowY: "auto" }}>{content}</div>
+            <div style={{ display: "flex", flexShrink: 0, borderTop: "1px solid var(--line)", background: "var(--surface)" }}>
+              {tabs.map(([k, ic]) => (
+                <button key={k} onClick={() => setTab(k)} style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "center", gap: 3, padding: "11px 0", border: "none", background: "transparent", cursor: "pointer", color: tab === k ? "var(--iron-orange)" : "var(--muted)" }}>
+                  <LI name={ic} size={20} color={tab === k ? "var(--iron-orange)" : "var(--muted)"} /><span style={{ fontSize: 10, fontWeight: 600, textTransform: "capitalize" }}>{k}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <React.Fragment>
+          <div className="rail">
+            <select value={stage} onChange={(e) => setStage(e.target.value)}>{FLOW.map((f) => <option key={f} value={f}>{LABELS[f]}</option>)}</select>
+            <button aria-label="theme" onClick={() => setTheme((t) => (t === "dark" ? "light" : "dark"))}><LI name={theme === "dark" ? "sun" : "moon"} size={17} color="var(--ink)" /></button>
+          </div>
+          <div className="phone-wrap" id="phoneWrap">
+            <PhoneShell><StatusBar /><div style={{ flex: 1, minHeight: 0, display: "flex", flexDirection: "column" }}>{body}</div><HomeBar /></PhoneShell>
+          </div>
+        </React.Fragment>
+      );
+    }
+    ReactDOM.createRoot(document.getElementById("phone")).render(<App />);
+    function fit() { const w = document.getElementById("phoneWrap"); if (!w) return; const s = Math.min(1, (window.innerHeight - 92) / 868, (window.innerWidth - 32) / 414); w.style.transformOrigin = "top center"; w.style.transform = `scale(${s})`; }
+    window.addEventListener("resize", fit); requestAnimationFrame(fit); setTimeout(fit, 60);
+  })();
+</script>
+</body>
+</html>

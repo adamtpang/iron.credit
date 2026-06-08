@@ -1,0 +1,93 @@
+/* ============================================================
+   IRON — Color tokens
+   A sovereign private bank that runs on bitcoin. Monochrome by
+   design: cool iron-grey, near-black and platinum white. No
+   colour accent — premium, old-money, the opposite of a casino.
+   Dark is the default; [data-theme="light"] inverts to cool paper.
+   Finance semantics (safe / caution / danger) are desaturated
+   near-greys so risk reads without shouting.
+   The accent token family is kept (named --iron-*) so components
+   need no change; its VALUE is now platinum (dark) / ink (light).
+   ============================================================ */
+
+:root {
+  /* --- Accent: platinum. The primary action is the brightest metal. --- */
+  --iron-orange:        #e7eaed;  /* platinum — primary button / accent */
+  --iron-orange-bright: #ffffff;  /* hover */
+  --iron-orange-press:  #c8cdd2;  /* pressed */
+  --iron-orange-ink:    #0b0c0f;  /* dark text/icon ON the platinum button */
+  --iron-orange-soft:   rgba(231, 234, 237, 0.09);
+  --iron-orange-line:   rgba(231, 234, 237, 0.24);
+
+  /* --- Cool iron neutral ramp (dark default) --- */
+  --bg:        #0a0b0d;  /* near-black, cool */
+  --surface:   #121418;  /* card */
+  --surface-2: #181b20;  /* inset */
+  --surface-3: #20242b;  /* raised / hover */
+  --line:      #282d35;  /* hairline */
+  --line-2:    #383f49;  /* stronger divider / input border */
+  --ink:       #f3f5f7;  /* primary text */
+  --muted:     #939aa4;  /* secondary text */
+  --faint:     #5e646e;  /* tertiary / disabled */
+
+  /* --- Brushed steel (used sparingly: card, logo highlight) --- */
+  --steel-hi:  #e8eaed;
+  --steel-mid: #aab0b8;
+  --steel-lo:  #6c727b;
+  --steel-sheen: linear-gradient(135deg, #e8eaed 0%, #b7bdc5 32%, #d2d7dc 52%, #8b919b 78%, #c2c7cd 100%); /* @kind other */
+  --gunmetal:  linear-gradient(150deg, #2a2e34 0%, #16181c 46%, #1f2329 78%, #101216 100%); /* @kind other */
+
+  /* --- Finance semantics — desaturated near-greys, no casino colour --- */
+  --safe:        #aeb4b8;  /* healthy — cool platinum-grey */
+  --safe-soft:   rgba(174, 180, 184, 0.12);
+  --caution:     #9a948b;  /* approaching — neutral warm-grey */
+  --caution-soft:rgba(154, 148, 139, 0.14);
+  --danger:      #b58e88;  /* at risk — muted clay-grey (the only faint warmth) */
+  --danger-soft: rgba(181, 142, 136, 0.16);
+
+  /* --- Semantic aliases (use these in components) --- */
+  --text-strong:   var(--ink);
+  --text-body:     var(--ink);
+  --text-muted:    var(--muted);
+  --surface-page:  var(--bg);
+  --surface-card:  var(--surface);
+  --surface-inset: var(--surface-2);
+  --border-hair:   var(--line);
+  --accent:        var(--iron-orange);
+  --accent-press:  var(--iron-orange-press);
+
+  --color-scheme: dark;
+}
+
+[data-theme="light"] {
+  --iron-orange:        #16181c;  /* ink — primary action on paper */
+  --iron-orange-bright: #2c313a;
+  --iron-orange-press:  #000000;
+  --iron-orange-ink:    #ffffff;
+  --iron-orange-soft:   rgba(20, 23, 28, 0.06);
+  --iron-orange-line:   rgba(20, 23, 28, 0.16);
+
+  --bg:        #eef0f2;  /* cool paper */
+  --surface:   #ffffff;
+  --surface-2: #f4f6f8;
+  --surface-3: #e9ecef;
+  --line:      #dfe3e7;
+  --line-2:    #c6ccd3;
+  --ink:       #14171b;
+  --muted:     #586069;
+  --faint:     #8b929b;
+
+  --steel-hi:  #ffffff;
+  --steel-mid: #c2c7cd;
+  --steel-lo:  #8d939b;
+  --gunmetal:  linear-gradient(150deg, #3a3f46 0%, #20242a 46%, #2c3138 78%, #181b20 100%); /* @kind other */
+
+  --safe:        #6a7370;
+  --safe-soft:   rgba(106, 115, 112, 0.12);
+  --caution:     #6f685c;
+  --caution-soft:rgba(111, 104, 92, 0.12);
+  --danger:      #97645d;
+  --danger-soft: rgba(151, 100, 93, 0.12);
+
+  --color-scheme: light;
+}

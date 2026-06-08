@@ -24,7 +24,7 @@ function WaitlistForm({ C, big }) {
         placeholder="you@email.com"
         style={{ flex: "1 1 200px", minWidth: 0, padding: "12px 14px", borderRadius: 11, border: `1px solid ${C.line}`, background: C.panel, color: C.ink, fontSize: 14, outline: "none" }} />
       <button type="submit"
-        style={{ padding: "12px 18px", borderRadius: 11, border: "none", background: `linear-gradient(145deg, ${C.amber}, #d97a06)`, color: "#1a0f00", fontSize: 14, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
+        style={{ padding: "12px 18px", borderRadius: 11, border: "none", background: C.amber, color: C.accentInk, fontSize: 14, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
         Get early access
       </button>
     </form>
@@ -62,7 +62,7 @@ export default function Landing() {
     <>
       <a href="#how" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>How it works</a>
       <a href="#faq" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>FAQ</a>
-      <a href="#get-started" style={{ padding: "8px 14px", borderRadius: 10, background: `linear-gradient(145deg, ${C.amber}, #d97a06)`, color: "#1a0f00", fontSize: 13, fontWeight: 700 }}>Get started</a>
+      <a href="#get-started" style={{ padding: "8px 14px", borderRadius: 10, background: C.amber, color: C.accentInk, fontSize: 13, fontWeight: 700 }}>Get started</a>
     </>
   );
 
@@ -114,7 +114,7 @@ export default function Landing() {
               <div className="flex" style={{ gap: 6, marginTop: 12 }}>
                 {Object.entries(MARKETS).map(([k, v]) => (
                   <button key={k} onClick={() => setMarket(k)}
-                    style={{ flex: 1, border: `1px solid ${market === k ? C.amber : C.line}`, background: market === k ? "rgba(247,147,26,.12)" : "transparent", color: C.ink, borderRadius: 9, padding: "7px 0", cursor: "pointer", fontSize: 13 }}>
+                    style={{ flex: 1, border: `1px solid ${market === k ? C.amber : C.line}`, background: market === k ? C.accentSoft : "transparent", color: C.ink, borderRadius: 9, padding: "7px 0", cursor: "pointer", fontSize: 13 }}>
                     {v.flag} {k}
                   </button>
                 ))}
@@ -143,7 +143,7 @@ export default function Landing() {
           {steps.map(([Icon, t, d], i) => (
             <div key={i} className="lift" style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 18, padding: 20 }}>
               <div className="flex items-center justify-between" style={{ marginBottom: 14 }}>
-                <div style={{ width: 38, height: 38, borderRadius: 11, background: "rgba(247,147,26,.12)", display: "grid", placeItems: "center" }}>
+                <div style={{ width: 38, height: 38, borderRadius: 11, background: C.accentSoft, display: "grid", placeItems: "center" }}>
                   <Icon size={19} color={C.amber} />
                 </div>
                 <span className="disp tnum" style={{ fontSize: 30, fontWeight: 800, color: C.line }}>{i + 1}</span>
@@ -161,7 +161,7 @@ export default function Landing() {
         <div className="grid feat-grid" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 14 }}>
           {features.map(([Icon, t, d], i) => (
             <div key={i} className="flex" style={{ gap: 14, background: C.panel, border: `1px solid ${C.line}`, borderRadius: 18, padding: 20, alignItems: "flex-start" }}>
-              <div style={{ flexShrink: 0, width: 40, height: 40, borderRadius: 11, background: "rgba(247,147,26,.12)", display: "grid", placeItems: "center" }}>
+              <div style={{ flexShrink: 0, width: 40, height: 40, borderRadius: 11, background: C.accentSoft, display: "grid", placeItems: "center" }}>
                 <Icon size={20} color={C.amber} />
               </div>
               <div>
@@ -185,7 +185,7 @@ export default function Landing() {
           </p>
           <div className="flex items-center" style={{ justifyContent: "center", gap: 10, flexWrap: "wrap" }}>
             {Object.entries(MARKETS).map(([k, v], i) => (
-              <div key={k} style={{ border: `1px solid ${i === 0 ? C.amber : C.line}`, background: i === 0 ? "rgba(247,147,26,.10)" : "transparent", borderRadius: 12, padding: "9px 16px", fontSize: 14, color: C.ink }}>
+              <div key={k} style={{ border: `1px solid ${i === 0 ? C.amber : C.line}`, background: i === 0 ? C.accentSoft : "transparent", borderRadius: 12, padding: "9px 16px", fontSize: 14, color: C.ink }}>
                 {v.flag} {v.name} <span style={{ color: C.mut, fontSize: 12 }}>{i === 0 ? "· launching" : "· soon"}</span>
               </div>
             ))}
@@ -208,7 +208,7 @@ export default function Landing() {
 
       {/* CTA */}
       <section id="get-started" style={{ maxWidth: 1080, margin: "0 auto", padding: "20px 18px 40px" }}>
-        <div style={{ background: `linear-gradient(150deg, rgba(247,147,26,.14), ${C.panel})`, border: `1px solid ${C.line}`, borderRadius: 22, padding: "34px 24px", textAlign: "center" }}>
+        <div style={{ background: `linear-gradient(150deg, ${C.accentSoft}, ${C.panel})`, border: `1px solid ${C.line}`, borderRadius: 22, padding: "34px 24px", textAlign: "center" }}>
           <div className="disp" style={{ fontSize: "clamp(24px,3.4vw,34px)", fontWeight: 800, color: C.ink, letterSpacing: "-.01em", marginBottom: 8 }}>Start stacking sats</div>
           <p style={{ color: C.mut, fontSize: 15, marginBottom: 20 }}>Join the early access list. Be first to stack when we launch in your country.</p>
           <div className="flex" style={{ justifyContent: "center" }}>
@@ -221,8 +221,8 @@ export default function Landing() {
       <footer style={{ borderTop: `1px solid ${C.line}` }}>
         <div className="flex items-center justify-between" style={{ maxWidth: 1080, margin: "0 auto", padding: "20px 18px", flexWrap: "wrap", gap: 12 }}>
           <div className="flex items-center" style={{ gap: 9 }}>
-            <div style={{ width: 26, height: 26, borderRadius: 8, background: `linear-gradient(145deg, ${C.amber}, #c96f0c)`, display: "grid", placeItems: "center" }}>
-              <Bitcoin size={15} color="#1a0f00" strokeWidth={2.4} />
+            <div style={{ width: 26, height: 26, borderRadius: 8, background: C.amber, display: "grid", placeItems: "center" }}>
+              <Bitcoin size={15} color={C.accentInk} strokeWidth={2.4} />
             </div>
             <span className="disp" style={{ fontWeight: 800, fontSize: 15, color: C.ink }}>Iron</span>
             <span style={{ color: C.mut, fontSize: 12.5 }}>· Stack bitcoin every week.</span>

@@ -1,0 +1,51 @@
+/* ============================================================
+   IRON — Typography tokens
+   Display: Bodoni Moda — high-contrast Didone, old-money gravitas.
+   Body/UI: Hanken Grotesk — clean, neutral, modern.
+   Data:    IBM Plex Mono — precise tabular figures for rates,
+            LTV, prices, balances (credibility through openness).
+   ============================================================ */
+
+:root {
+  /* --- Families --- */
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-body:    "Hanken Grotesk", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:    "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  /* --- Weights --- */
+  --weight-regular:  400;
+  --weight-medium:   500;
+  --weight-semibold: 600;
+  --weight-bold:     700;
+  --weight-display:  500;  /* Bodoni reads heavy; mid-weight is the workhorse */
+  --weight-display-bold: 700;
+
+  /* --- Type scale (px) --- */
+  --text-2xs:  11px;   /* legal / fine print */
+  --text-xs:   12px;   /* eyebrow / badge / mono labels */
+  --text-sm:   13px;   /* meta, captions */
+  --text-base: 15px;   /* body default */
+  --text-md:   17px;   /* lead body */
+  --text-lg:   20px;   /* card titles */
+  --text-xl:   24px;   /* sub-headline */
+  --text-2xl:  30px;   /* section heading */
+  --text-3xl:  40px;   /* big number / display sm */
+  --text-4xl:  52px;   /* display */
+  --text-hero: clamp(44px, 6.5vw, 84px);  /* landing headline */
+
+  /* --- Line heights --- */
+  --leading-tight:  1.02;  /* display headlines */
+  --leading-snug:   1.16;
+  --leading-body:   1.55;  /* paragraphs */
+  --leading-mono:   1.4;
+
+  /* --- Letter spacing --- */
+  --tracking-display: -0.015em;  /* tighten Bodoni at large sizes */
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-eyebrow: 0.22em;    /* uppercase mono labels — wide, engraved feel */
+  --tracking-wide:    0.04em;
+
+  /* tabular figures for all live numbers */
+  --num-feature: "tnum" 1, "lnum" 1; /* @kind other */
+}

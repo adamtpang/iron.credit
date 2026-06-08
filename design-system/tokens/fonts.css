@@ -1,0 +1,7 @@
+/* ============================================================
+   IRON — Web fonts (Google Fonts)
+   Bodoni Moda (display), Hanken Grotesk (body/UI), IBM Plex Mono (data).
+   To self-host, replace this @import with local @font-face rules.
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Hanken+Grotesk:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
