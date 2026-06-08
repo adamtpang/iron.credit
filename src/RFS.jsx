@@ -145,7 +145,7 @@ export default function RFS() {
             Every moat on this list is trust, integrations, regulation, and data. None of them is a token. A company whose only product is a token, and especially an AI token, has no defensibility in this space. Build switching costs, not tickers.
           </p>
           <p className="body" style={{ fontSize: 16, lineHeight: 1.65, color: C.ink, margin: 0 }}>
-            We are building BTCSave at the intersection of the savings wedge and the inheritance moat, with a stablecoin spend-and-remit layer so we are not on the wrong side of the filter. The rest of this list is open. If you are building any of it, we would like to talk.
+            We are building number two: the bitcoin version of Chase. An Acorns-style app where you save a dollar at a time, it buys bitcoin you control, and then you borrow dollars in USDT against that bitcoin and spend them on a card. Savings is the wedge, credit is the engine, trust is the moat: non-custodial by default, open reserves and liabilities, real skin in the game. We chose credit over the other two not because it scores highest (inheritance does) but because it is the one we have the founder-fit to win. Start with one dollar. We guide you the whole way. The rest of this list is open, and if you are building any of it, we would like to talk.
           </p>
         </section>
 
