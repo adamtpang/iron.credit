@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import { ArrowLeft, ArrowRight, Bitcoin, CreditCard, ShieldCheck, Lock, TrendingUp, Wallet, Check, Landmark, Eye } from "lucide-react";
+import { ArrowLeft, ArrowRight, Bitcoin, CreditCard, ShieldCheck, Lock, TrendingUp, Wallet, Check, Landmark, Eye, BookOpen, UserCheck } from "lucide-react";
 import { useTheme } from "./theme.jsx";
 import Nav from "./components/Nav.jsx";
 
 const FLOW = [
   [Bitcoin, "Deposit bitcoin", "Held in collaborative custody. We cannot touch it."],
   [CreditCard, "Get a USDT credit line", "Instant, backed by your bitcoin, no credit check."],
-  [Wallet, "Spend or withdraw", "Spend USDT on a card, or send it to your bank."],
+  [Wallet, "Spend anywhere", "Tap your card anywhere Visa is accepted, or withdraw USDT to your wallet."],
   [ArrowRight, "Repay or top up", "Flexible. Your bitcoin stays yours, and keeps its upside."],
 ];
 
@@ -21,6 +21,7 @@ const TRUST = [
   [Eye, "Open by default", "Continuous proof of reserves and liabilities, not a quarterly snapshot."],
   [ShieldCheck, "Never rehypothecate", "The exact thing that killed Celsius and BlockFi. We do not do it."],
   [Landmark, "Skin in the game", "Built for the bitcoin community, not extracted from it."],
+  [BookOpen, "No predatory tricks", "Rates shown upfront, the true cost in plain language, and we teach you what you are paying. Interest is how we make money, and we will never hide that."],
 ];
 
 const MODEL = [
@@ -89,14 +90,14 @@ export default function Credit() {
       <article style={{ maxWidth: 920, margin: "0 auto", padding: "16px 20px 60px" }}>
         {/* Hero */}
         <div style={{ paddingBottom: 26, borderBottom: `1px solid ${C.line}`, marginBottom: 30 }}>
-          <div style={{ color: C.amber, fontSize: 12, fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 12 }}>The product</div>
+          <div style={{ color: C.amber, fontSize: 12, fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 12 }}>The non-custodial bitcoin credit card</div>
           <h1 className="disp" style={{ fontSize: "clamp(36px, 6vw, 60px)", fontWeight: 800, lineHeight: 1.02, letterSpacing: "-.02em", margin: "0 0 16px", color: C.ink }}>
             Keep your bitcoin.<br />Spend dollars.
           </h1>
           <p className="body" style={{ fontSize: 17, lineHeight: 1.55, color: C.mut, maxWidth: 620, margin: 0 }}>
-            A bitcoin-backed credit line and a USDT card. The trustworthy bitcoin bank for the people who refuse to sell. Chase for BTC and USDT.
+            Borrow dollars against your bitcoin and spend anywhere, without selling and without a credit check. For the people who hold bitcoin, and the people the banks turned away. Chase for BTC and USDT.
           </p>
-          <p className="body" style={{ fontSize: 12.5, color: C.mut, marginTop: 14 }}>Aether Pte Ltd, Singapore. Consumer brand name to be finalized.</p>
+          <p className="body" style={{ fontSize: 12.5, color: C.mut, marginTop: 14 }}>Aether Pte Ltd, Singapore.</p>
         </div>
 
         {/* Problem */}
@@ -129,6 +130,15 @@ export default function Credit() {
           </div>
           <div className="credit-3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12 }}>
             {PRINCIPLES.map(([Icon, t, b], i) => <Card key={i} icon={Icon} title={t} body={b} />)}
+          </div>
+        </section>
+
+        {/* Who it is for */}
+        <section style={{ marginBottom: 34 }}>
+          <H2>Who it is for</H2>
+          <div className="credit-2" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12 }}>
+            <Card icon={Bitcoin} title="Bitcoin holders who refuse to sell" body="You own bitcoin and will not sell it. Borrow against it at better terms than unsecured credit, keep the upside, and stay non-custodial. A product Chase structurally cannot offer." />
+            <Card icon={UserCheck} title="The people the banks turned away" body="No credit file, the wrong country, no history. Your bitcoin is your qualification, no FICO and no passport test. We say yes where Chase says no." />
           </div>
         </section>
 
