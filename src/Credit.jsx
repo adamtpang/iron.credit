@@ -119,7 +119,7 @@ export default function Credit() {
         </div>
 
         {/* Problem */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>The problem</H2>
           <p className="body" style={{ fontSize: 16.5, lineHeight: 1.65, color: C.ink, margin: 0 }}>
             Bitcoiners are asset-rich and cash-poor by choice. Selling means a taxable event and giving up the upside, so they do not want to sell, yet they still need dollars. The existing ways to borrow against bitcoin are custodial, opaque, gamified, or region-locked, and the household names that tried this (Celsius, BlockFi) blew up by rehypothecating customer funds. A real, urgent, recurring need with no trustworthy home.
@@ -127,7 +127,7 @@ export default function Credit() {
         </section>
 
         {/* Product */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>The product</H2>
           <p className="body" style={{ fontSize: 16.5, lineHeight: 1.6, color: C.ink, margin: "0 0 18px" }}>
             The same daily feel as the Chase or Discover card you already use, except the limit is backed by your bitcoin instead of your credit score.
@@ -152,7 +152,7 @@ export default function Credit() {
         </section>
 
         {/* Who it is for */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>Who it is for</H2>
           <div className="credit-2" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12 }}>
             <Card icon={Bitcoin} title="Bitcoin holders who refuse to sell" body="You own bitcoin and will not sell it. Borrow against it at better terms than unsecured credit, keep the upside, and stay non-custodial. A product Chase structurally cannot offer." />
@@ -161,7 +161,7 @@ export default function Credit() {
         </section>
 
         {/* Why it wins */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>Why it wins: the moat is trust</H2>
           <p className="body" style={{ fontSize: 16, lineHeight: 1.6, color: C.ink, margin: "0 0 16px" }}>
             Every competitor is a feature: a loan desk, a borrow button, or a cashback card. None is a trustworthy, non-custodial bank that turns your stack into spendable dollars and treats you as a relationship.
@@ -172,7 +172,7 @@ export default function Credit() {
         </section>
 
         {/* Business model */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>Business model</H2>
           <p className="body" style={{ fontSize: 16, lineHeight: 1.6, color: C.ink, margin: "0 0 16px" }}>
             A real interest-earning balance sheet, not a trading spread. Overcollateralized lending means a fraction of Chase's 5 to 6% charge-offs, so we keep more of the spread and we do not blow up.
@@ -191,7 +191,7 @@ export default function Credit() {
         </section>
 
         {/* Why us */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>Why us</H2>
           <p className="body" style={{ fontSize: 16, lineHeight: 1.65, color: C.ink, margin: 0 }}>
             The founder is the customer: a heavy credit user (Chase, Discover, Wise) who pays more in credit interest than any other expense and understands the borrower from the inside. Two technical operator founders who ship, with native distribution into Network School and the global bitcoin community. Partners de-risk the two rails the product runs on: Fulgur and the bitcoin community for the BTC collateral, Tether and Plan B for the USDT credit and card.
@@ -199,7 +199,7 @@ export default function Credit() {
         </section>
 
         {/* Market */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>The market</H2>
           <div className="credit-4" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
             {STATS.map(([big, small], i) => (
@@ -224,7 +224,7 @@ export default function Credit() {
         </section>
 
         {/* Roadmap */}
-        <section style={{ marginBottom: 34 }}>
+        <section style={{ marginBottom: 22 }}>
           <H2>Roadmap</H2>
           <div style={{ display: "grid", gap: 10 }}>
             {ROADMAP.map(([phase, b], i) => (
@@ -242,6 +242,35 @@ export default function Credit() {
           <p className="body" style={{ fontSize: 16, lineHeight: 1.65, color: C.ink, margin: 0 }}>
             Raise a lean pre-seed of mission-aligned equity (Fulgur, Curious Ventures, Network School angels) for team and product, and a separate USDT credit facility (debt, via the Tether and Plan B relationship) for the loan book. Never dilute the company to fund the book. The business throws off interest income and becomes self-funding as it scales.
           </p>
+        </section>
+
+        {/* Founder */}
+        <section style={{ marginBottom: 14 }}>
+          <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 16, padding: 18, display: "flex", gap: 16, alignItems: "center", flexWrap: "wrap" }}>
+            <div className="disp" style={{ width: 52, height: 52, borderRadius: 99, background: C.panel2, border: `1px solid ${C.line}`, display: "grid", placeItems: "center", flexShrink: 0, fontWeight: 700, color: C.ink, fontSize: 17 }}>AP</div>
+            <div style={{ flex: "1 1 240px" }}>
+              <div className="disp" style={{ fontSize: 15.5, fontWeight: 700, color: C.ink }}>Built in the open by Adam Pang</div>
+              <div style={{ color: C.mut, fontSize: 13.5, lineHeight: 1.5, marginTop: 2 }}>A heavy credit-card user building the card he wants to use. Skin in the game. <a href="https://adampang.com" target="_blank" rel="noopener noreferrer" style={{ color: C.amber, fontWeight: 600 }}>adampang.com</a></div>
+            </div>
+          </div>
+        </section>
+
+        {/* Three doors */}
+        <section style={{ marginBottom: 22 }}>
+          <div className="credit-3" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 12 }}>
+            <a href="#waitlist" style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, padding: 18, display: "block" }}>
+              <div className="disp" style={{ fontSize: 15.5, fontWeight: 700, color: C.ink }}>Get the card</div>
+              <div style={{ color: C.mut, fontSize: 13, marginTop: 3 }}>Join the waitlist.</div>
+            </a>
+            <Link to="/investors" style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, padding: 18, display: "block" }}>
+              <div className="disp" style={{ fontSize: 15.5, fontWeight: 700, color: C.ink }}>For investors</div>
+              <div style={{ color: C.mut, fontSize: 13, marginTop: 3 }}>The model and the comps.</div>
+            </Link>
+            <a href="mailto:founder@iron.credit" style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, padding: 18, display: "block" }}>
+              <div className="disp" style={{ fontSize: 15.5, fontWeight: 700, color: C.ink }}>Build it with us</div>
+              <div style={{ color: C.mut, fontSize: 13, marginTop: 3 }}>founder@iron.credit</div>
+            </a>
+          </div>
         </section>
 
         {/* Footer line */}
