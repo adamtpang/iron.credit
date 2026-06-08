@@ -38,6 +38,15 @@ const STATS = [
   ["$10 to 60B", "credible top-of-S-curve outcome"],
 ];
 
+const COMPS = [
+  ["JPMorgan Chase", "~$837B", "all of banking"],
+  ["American Express", "~$215B", "credit specialist"],
+  ["Capital One", "~$135B", "credit specialist"],
+  ["Nubank", "~$55 to 60B", "credit-led fintech, our comp"],
+  ["Coinbase", "~$50 to 90B", "crypto, our comp"],
+  ["SoFi", "~$20B", "fintech"],
+];
+
 const ROADMAP = [
   ["V1", "Secured bitcoin-backed credit line plus USDT card. Non-custodial, radically transparent."],
   ["Data", "Record how our own users borrow and repay. The proprietary underwriting moat."],
@@ -188,6 +197,18 @@ export default function Credit() {
               <div key={i} style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, padding: 16 }}>
                 <div className="disp tnum" style={{ fontSize: 19, fontWeight: 800, color: C.ink, lineHeight: 1.1 }}>{big}</div>
                 <div style={{ color: C.mut, fontSize: 12.5, marginTop: 4 }}>{small}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ marginTop: 14, background: C.panel, border: `1px solid ${C.line}`, borderRadius: 14, overflow: "hidden" }}>
+            <div style={{ padding: "10px 16px", borderBottom: `1px solid ${C.line}`, fontSize: 11.5, color: C.mut, textTransform: "uppercase", letterSpacing: ".06em" }}>Proof in the fiat world: credit-led companies are the most valuable in finance</div>
+            {COMPS.map(([name, cap, note], i) => (
+              <div key={i} className="flex items-center justify-between" style={{ padding: "10px 16px", borderTop: i ? `1px solid ${C.line}` : "none" }}>
+                <span style={{ color: C.ink, fontSize: 14, fontWeight: 600 }}>{name}</span>
+                <span className="flex items-center" style={{ gap: 12 }}>
+                  <span style={{ color: C.mut, fontSize: 11.5 }}>{note}</span>
+                  <span className="disp tnum" style={{ color: C.ink, fontSize: 15, fontWeight: 700, minWidth: 84, textAlign: "right" }}>{cap}</span>
+                </span>
               </div>
             ))}
           </div>
