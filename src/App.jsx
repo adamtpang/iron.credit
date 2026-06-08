@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import { useTheme } from "./theme.jsx";
 import Landing from "./Landing.jsx";
 import Investors from "./Investors.jsx";
+import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
   const { C } = useTheme();
@@ -25,6 +26,7 @@ export default function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/investors" element={<Investors />} />
       </Routes>
+      <FloatingActions />
     </div>
   );
 }

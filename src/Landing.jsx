@@ -5,6 +5,7 @@ import { useTheme } from "./theme.jsx";
 import { MARKETS } from "./lib.js";
 import Nav from "./components/Nav.jsx";
 import PhoneMock from "./components/PhoneMock.jsx";
+import SavingsCalendar from "./components/SavingsCalendar.jsx";
 
 function WaitlistForm({ C, big }) {
   const [email, setEmail] = useState("");
@@ -61,6 +62,7 @@ export default function Landing() {
     <>
       <a href="#how" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>How it works</a>
       <a href="#faq" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>FAQ</a>
+      <a href="#get-started" style={{ padding: "8px 14px", borderRadius: 10, background: `linear-gradient(145deg, ${C.amber}, #d97a06)`, color: "#1a0f00", fontSize: 13, fontWeight: 700 }}>Get started</a>
     </>
   );
 
@@ -72,6 +74,7 @@ export default function Landing() {
           .steps-grid{grid-template-columns:repeat(3,1fr) !important;}
           .feat-grid{grid-template-columns:repeat(2,1fr) !important;}
         }
+        @media(min-width:760px){ .cal-grid{grid-template-columns:1.1fr .9fr !important;} }
         @media(max-width:620px){ .nav-link{display:none;} }
         .lift{transition:transform .18s ease, box-shadow .18s ease, border-color .18s ease;}
         .lift:hover{transform:translateY(-3px);}
@@ -170,6 +173,9 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* SAVINGS CALENDAR */}
+      <SavingsCalendar />
+
       {/* MARKETS */}
       <section style={{ maxWidth: 1080, margin: "0 auto", padding: "30px 18px" }}>
         <div style={{ background: C.panel, border: `1px solid ${C.line}`, borderRadius: 20, padding: "26px 22px", textAlign: "center" }}>
@@ -201,7 +207,7 @@ export default function Landing() {
       </section>
 
       {/* CTA */}
-      <section style={{ maxWidth: 1080, margin: "0 auto", padding: "20px 18px 40px" }}>
+      <section id="get-started" style={{ maxWidth: 1080, margin: "0 auto", padding: "20px 18px 40px" }}>
         <div style={{ background: `linear-gradient(150deg, rgba(247,147,26,.14), ${C.panel})`, border: `1px solid ${C.line}`, borderRadius: 22, padding: "34px 24px", textAlign: "center" }}>
           <div className="disp" style={{ fontSize: "clamp(24px,3.4vw,34px)", fontWeight: 800, color: C.ink, letterSpacing: "-.01em", marginBottom: 8 }}>Start stacking sats</div>
           <p style={{ color: C.mut, fontSize: 15, marginBottom: 20 }}>Join the early access list. Be first to stack when we launch in your country.</p>
