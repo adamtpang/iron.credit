@@ -28,7 +28,7 @@ export function ThemeProvider({ children }) {
       const saved = localStorage.getItem("iron-theme");
       if (saved === "light" || saved === "dark") return saved;
     }
-    return "dark"; // Iron is dark by default (premium private-bank aesthetic)
+    return "light"; // light is the default
   });
 
   useEffect(() => {

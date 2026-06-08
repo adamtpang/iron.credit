@@ -5,6 +5,7 @@ import Investors from "./Investors.jsx";
 import RFS from "./RFS.jsx";
 import Credit from "./Credit.jsx";
 import Design from "./Design.jsx";
+import Pricing from "./Pricing.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
@@ -32,6 +33,7 @@ export default function App() {
         <Route path="/rfs" element={<RFS />} />
         <Route path="/credit" element={<Credit />} />
         <Route path="/design" element={<Design />} />
+        <Route path="/pricing" element={<Pricing />} />
       </Routes>
       <FloatingActions />
     </div>

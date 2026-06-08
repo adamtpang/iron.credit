@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft, ArrowRight, Bitcoin, CreditCard, ShieldCheck, Lock, TrendingUp, Wallet, Check, Landmark, Eye, BookOpen, UserCheck } from "lucide-react";
 import { useTheme } from "./theme.jsx";
 import Nav from "./components/Nav.jsx";
+import WaitlistForm from "./components/WaitlistForm.jsx";
+import { IronCard } from "../design-system/components/brand/IronCard.jsx";
 
 const FLOW = [
   [Bitcoin, "Deposit bitcoin", "Held in collaborative custody. We cannot touch it."],
@@ -59,10 +61,8 @@ export default function Credit() {
 
   const navRight = (
     <>
-      <Link to="/rfs" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>RFS</Link>
-      <Link to="/" className="flex items-center" style={{ gap: 6, color: C.mut, fontSize: 13.5, fontWeight: 500 }}>
-        <ArrowLeft size={14} /> Home
-      </Link>
+      <Link to="/pricing" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>Pricing</Link>
+      <a href="#waitlist" style={{ padding: "8px 14px", borderRadius: 10, background: C.amber, color: C.accentInk, fontSize: 13, fontWeight: 700 }}>Get started</a>
     </>
   );
 
@@ -90,6 +90,7 @@ export default function Credit() {
           .credit-3{grid-template-columns:repeat(3,1fr) !important;}
           .credit-2{grid-template-columns:repeat(2,1fr) !important;}
           .credit-4{grid-template-columns:repeat(4,1fr) !important;}
+          .hero-2{grid-template-columns:1.05fr .95fr !important;}
         }
         @media(max-width:560px){ .nav-link{display:none;} }
       `}</style>
@@ -98,15 +99,23 @@ export default function Credit() {
 
       <article style={{ maxWidth: 920, margin: "0 auto", padding: "16px 20px 60px" }}>
         {/* Hero */}
-        <div style={{ paddingBottom: 26, borderBottom: `1px solid ${C.line}`, marginBottom: 30 }}>
-          <div style={{ color: C.amber, fontSize: 12, fontWeight: 700, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 12 }}>The non-custodial bitcoin credit card</div>
-          <h1 className="disp" style={{ fontSize: "clamp(36px, 6vw, 60px)", fontWeight: 800, lineHeight: 1.02, letterSpacing: "-.02em", margin: "0 0 16px", color: C.ink }}>
-            Keep your bitcoin.<br />Spend dollars.
-          </h1>
-          <p className="body" style={{ fontSize: 17, lineHeight: 1.55, color: C.mut, maxWidth: 620, margin: 0 }}>
-            Borrow dollars against your bitcoin and spend anywhere, without selling and without a credit check. For the people who hold bitcoin, and the people the banks turned away. Chase for BTC and USDT.
-          </p>
-          <p className="body" style={{ fontSize: 12.5, color: C.mut, marginTop: 14 }}>Iron · Singapore</p>
+        <div className="grid hero-2" style={{ display: "grid", gridTemplateColumns: "1fr", gap: 30, paddingBottom: 28, borderBottom: `1px solid ${C.line}`, marginBottom: 30, alignItems: "center" }}>
+          <div>
+            <div className="mono" style={{ color: C.mut, fontSize: 12, letterSpacing: ".14em", textTransform: "uppercase", marginBottom: 12 }}>The non-custodial bitcoin credit card</div>
+            <h1 className="disp" style={{ fontSize: "clamp(34px, 5.5vw, 56px)", fontWeight: 800, lineHeight: 1.03, letterSpacing: "-.02em", margin: "0 0 16px", color: C.ink }}>
+              Keep your bitcoin.<br />Spend dollars.
+            </h1>
+            <p className="body" style={{ fontSize: 16.5, lineHeight: 1.55, color: C.mut, maxWidth: 520, margin: "0 0 22px" }}>
+              Borrow dollars against your bitcoin and spend anywhere on a Visa card, without selling and without a credit check. For people who hold bitcoin, and people the banks turned away.
+            </p>
+            <div id="waitlist"><WaitlistForm C={C} big /></div>
+            <div className="flex items-center" style={{ gap: 8, marginTop: 14, color: C.mut, fontSize: 12.5 }}>
+              <Lock size={14} color={C.green} /> Non-custodial. Iron, Singapore.
+            </div>
+          </div>
+          <div style={{ display: "grid", placeItems: "center" }}>
+            <IronCard width={360} holder="YOUR NAME" last4="0021" />
+          </div>
         </div>
 
         {/* Problem */}
