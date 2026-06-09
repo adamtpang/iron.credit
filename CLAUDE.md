@@ -34,4 +34,9 @@ Distilled from how every prior bitcoin lender and crypto card died (full analysi
 - Run: `npm run dev` (port 5173). Build: `npm run build`. Preview config in `.claude/launch.json`.
 - Deploy target: iron.credit (Vercel, git-connected auto-deploy). Repo: github.com/adamtpang/iron.credit.
 
-See `MASTERPLAN.md` (strategy, master plan, income and speed scoreboard), `GRAVEYARD.md` (failure modes to avoid), `PROTOTYPE.md` (build path + system diagrams), `SITEMAP.md` (IA + SEO plan), and `PITCH.md` for the full brief.
+## Company OS (internal tool, dogfooded here)
+This repo doubles as the first dogfood of a portable company operating system in `company-os/`. The dashboard (`company-os/index.html`) reads `company-os/company-os.data.js` (a JSON-style config and state file, the single source of truth, kept in sync with these context files). Full spec, schema, and commands: `company-os/SKILL.md`.
+- When the user asks, operate it: "log this week", "check off <milestone>", "set <metric> to N", "interview me" (onboarding a new company), "sync from context". After edits, tell them to refresh the dashboard.
+- It is internal. Never deploy `company-os/` to the public site (keep it out of `src/` and `public/`; it is not a route).
+
+See `MASTERPLAN.md` (strategy, master plan, income and speed scoreboard), `GRAVEYARD.md` (failure modes to avoid), `PROTOTYPE.md` (build path + system diagrams), `SITEMAP.md` (IA + SEO plan), `COMPANY.md` and `COFOUNDER.md` (operating and team playbooks), and `PITCH.md` for the full brief.
