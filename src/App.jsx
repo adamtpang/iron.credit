@@ -8,6 +8,7 @@ import Design from "./Design.jsx";
 import Pricing from "./Pricing.jsx";
 import How from "./How.jsx";
 import Score from "./Score.jsx";
+import CardView from "./CardView.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 export default function App() {
@@ -38,6 +39,7 @@ export default function App() {
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/how" element={<How />} />
         <Route path="/score" element={<Score />} />
+        <Route path="/card" element={<CardView />} />
       </Routes>
       <FloatingActions />
     </div>
