@@ -61,6 +61,7 @@ export default function Credit() {
 
   const navRight = (
     <>
+      <Link to="/score" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>Free score</Link>
       <Link to="/pricing" className="nav-link" style={{ color: C.mut, fontSize: 13.5, fontWeight: 500 }}>Pricing</Link>
       <a href="#waitlist" style={{ padding: "8px 14px", borderRadius: 10, background: C.amber, color: C.accentInk, fontSize: 13, fontWeight: 700 }}>Get started</a>
     </>
