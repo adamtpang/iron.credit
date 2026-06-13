@@ -15,7 +15,10 @@ Bridgewater's "principles encoded as software."
 `window.COMPANY_OS = { ... }` with these universal fields (every company fills the blanks):
 - `company`, `tagline`, `mission`, `problem`, `northStar`
 - `finances`: `{ income, expenses, savings }` (monthly income, monthly expenses, cash)
-- `metrics`: the 3 to 5 input metrics the founder controls weekly
+- `metrics`: the 3 to 5 input metrics the founder controls weekly, as `[{ label, value, hint, key }]`
+  (labels are company-specific: a startup tracks waitlist signups, a wholesaler tracks orders)
+- `charts`: which `history` keys to render as trends, `[{ label, key, color }]`
+- `levels` (optional): override the gamified level names `[[threshold, name], ...]`
 - `goals`: quarterly goals `[{ text, done }]`
 - `products`: the product line `[{ name, status }]` (Live / Building / Next / Later)
 - `roadmap`: gated stages `[{ stage, items:[{ label, done }] }]`

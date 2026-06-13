@@ -44,7 +44,7 @@
   var app = document.getElementById('app');
   if(!d){ app.innerHTML = '<p style="color:#d64545">company-os.data.js not found.</p>'; return; }
 
-  var TIERS = [[0,'Day 1'],[1,'Founder'],[6,'Builder'],[13,'Operator'],[21,'Captain'],[30,'Iron CEO']];
+  var TIERS = d.levels || [[0,'Day 1'],[1,'Founder'],[6,'Builder'],[13,'Operator'],[21,'Captain'],[30,'CEO']];
   var fmt = function(n){ return '$' + Math.round(Number(n)||0).toLocaleString('en-US'); };
   var esc = function(s){ return String(s).replace(/[&<>]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;'}[c];}); };
 
@@ -68,7 +68,10 @@
     return '<svg width="100%" viewBox="0 0 '+w+' '+h+'" preserveAspectRatio="none" style="height:60px"><polyline fill="none" stroke="'+color+'" stroke-width="2" points="'+pts+'"/></svg>';
   }
   var hist = d.history||[];
-  var wl = hist.map(function(x){return x.waitlist;}), cash = hist.map(function(x){return x.savings;});
+  var charts = d.charts || [
+    {label:'Waitlist growth', key:'waitlist', color:'var(--amber)'},
+    {label:'Cash on hand', key:'savings', color:'var(--green)'}
+  ];
 
   function tone(s){ return s==='Live'?'var(--green)':(s==='Building'||s==='Next')?'var(--amber)':'var(--mut)'; }
 
@@ -94,15 +97,17 @@
     + '</div>';
 
   // trends
-  html += '<div class="h">Trends</div><div class="row c2">'
-    + '<div class="card"><div class="muted small" style="margin-bottom:8px">Waitlist growth</div>'+spark(wl,'var(--amber)')+'</div>'
-    + '<div class="card"><div class="muted small" style="margin-bottom:8px">Cash on hand</div>'+spark(cash,'var(--green)')+'</div>'
-    + '</div>';
+  html += '<div class="h">Trends</div><div class="row c2">';
+  charts.forEach(function(c){
+    var series = hist.map(function(x){return x[c.key];});
+    html += '<div class="card"><div class="muted small" style="margin-bottom:8px">'+esc(c.label)+'</div>'+spark(series, c.color||'var(--amber)')+'</div>';
+  });
+  html += '</div>';
 
-  // north star + inputs
+  // north star + inputs (metrics is an array of {label, value, hint})
   html += '<div class="h">North star and weekly inputs</div><div class="row c3">';
-  [['Waitlist signups',d.metrics.waitlist,'north star'],['Discovery calls',d.metrics.calls,'10 / wk'],['Posts shipped',d.metrics.posts,'5-7 / wk']].forEach(function(p){
-    html += '<div class="card"><div class="flex between" style="margin-bottom:6px"><span class="muted small">'+p[0]+'</span><span class="mono small muted">'+p[2]+'</span></div><div class="disp tnum" style="font-size:22px;font-weight:800">'+(p[1]||0)+'</div></div>';
+  (d.metrics||[]).forEach(function(m){
+    html += '<div class="card"><div class="flex between" style="margin-bottom:6px"><span class="muted small">'+esc(m.label)+'</span><span class="mono small muted">'+esc(m.hint||'')+'</span></div><div class="disp tnum" style="font-size:22px;font-weight:800">'+(m.value||0)+'</div></div>';
   });
   html += '</div>';
 

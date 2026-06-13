@@ -28,8 +28,17 @@ window.COMPANY_OS = {
   // Money (PLACEHOLDERS, replace with real numbers; gitignore this file if sensitive)
   finances: { income: 0, expenses: 1200, savings: 15000 },
 
-  // Inputs you control
-  metrics: { waitlist: 0, calls: 0, posts: 0 },
+  // Inputs you control (label + current value + target hint). Founders rename these to fit.
+  metrics: [
+    { label: "Waitlist signups", value: 0, hint: "north star", key: "waitlist" },
+    { label: "Discovery calls", value: 0, hint: "10 / wk", key: "calls" },
+    { label: "Posts shipped", value: 0, hint: "5-7 / wk", key: "posts" },
+  ],
+  // Which history keys to chart as trends
+  charts: [
+    { label: "Waitlist growth", key: "waitlist", color: "var(--amber)" },
+    { label: "Cash on hand", key: "savings", color: "var(--green)" },
+  ],
   streak: 0,
 
   // Quarterly goals
