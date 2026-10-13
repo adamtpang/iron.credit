@@ -3,7 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import { useTheme } from "./theme.jsx";
 import Investors from "./Investors.jsx";
 import RFS from "./RFS.jsx";
-import Credit from "./Credit.jsx";
+import ConceptLanding from "./ConceptLanding.jsx";
 import Design from "./Design.jsx";
 import Pricing from "./Pricing.jsx";
 import How from "./How.jsx";
@@ -14,16 +14,16 @@ import Legends from "./Legends.jsx";
 import FloatingActions from "./components/FloatingActions.jsx";
 
 const TITLES = {
-  "/": "Iron · Keep your bitcoin, spend dollars",
-  "/credit": "Iron · Keep your bitcoin, spend dollars",
+  "/": "Iron · Bitcoin-backed credit concept",
+  "/credit": "Iron · Bitcoin-backed credit concept",
   "/how": "How it works · Iron",
   "/pricing": "Pricing · Iron",
-  "/score": "Free crypto credit score · Iron",
+  "/score": "Illustrative credit score · Iron",
   "/card": "Your Iron card · Iron",
   "/investors": "For investors · Iron",
   "/rfs": "Bitcoin Requests for Startups · Iron",
   "/design": "Brand and design system · Iron",
-  "/demo": "Live demo · Iron",
+  "/demo": "Concept demo · Iron",
   "/legends": "The greatest credit companies of all time · Iron",
 };
 
@@ -32,7 +32,7 @@ export default function App() {
   const { pathname } = useLocation();
 
   useEffect(() => {
-    document.title = TITLES[pathname] || "Iron · The non-custodial bitcoin credit card";
+    document.title = TITLES[pathname] || "Iron · Bitcoin-backed credit concept";
   }, [pathname]);
 
   return (
@@ -53,10 +53,10 @@ export default function App() {
         .rise{animation:rise .7s cubic-bezier(.2,.7,.2,1) both;}
       `}</style>
       <Routes>
-        <Route path="/" element={<Credit />} />
+        <Route path="/" element={<ConceptLanding />} />
         <Route path="/investors" element={<Investors />} />
         <Route path="/rfs" element={<RFS />} />
-        <Route path="/credit" element={<Credit />} />
+        <Route path="/credit" element={<ConceptLanding />} />
         <Route path="/design" element={<Design />} />
         <Route path="/pricing" element={<Pricing />} />
         <Route path="/how" element={<How />} />
@@ -64,7 +64,7 @@ export default function App() {
         <Route path="/card" element={<CardView />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/legends" element={<Legends />} />
-        <Route path="*" element={<Credit />} />
+        <Route path="*" element={<ConceptLanding />} />
       </Routes>
       <FloatingActions />
     </div>
