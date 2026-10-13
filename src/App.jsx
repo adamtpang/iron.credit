@@ -11,7 +11,6 @@ import Score from "./Score.jsx";
 import CardView from "./CardView.jsx";
 import Demo from "./Demo.jsx";
 import Legends from "./Legends.jsx";
-import FloatingActions from "./components/FloatingActions.jsx";
 
 const TITLES = {
   "/": "Iron · Bitcoin-backed credit concept",
@@ -66,7 +65,6 @@ export default function App() {
         <Route path="/legends" element={<Legends />} />
         <Route path="*" element={<ConceptLanding />} />
       </Routes>
-      <FloatingActions />
     </div>
   );
 }
