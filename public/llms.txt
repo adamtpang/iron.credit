@@ -1,19 +1,16 @@
 # Iron (iron.credit)
 
-> A non-custodial bitcoin-backed credit card: keep your bitcoin, spend dollars, never sell.
+> A concept prototype for bitcoin-backed credit: borrowing dollars against bitcoin without selling it. Loans, cards, and custody services are not available.
 
-Iron lets you lock bitcoin as collateral, borrow dollars (USDT) against it, and spend on a Visa card, without selling and without a credit check. It stays overcollateralized (roughly 40 to 50% LTV) and non-custodial by default via collaborative custody, so the collateral is never rehypothecated. Revenue comes from net interest spread on the credit line, card interchange, and thin transparent FX, never from lending out the collateral.
-
-It is built for two groups: bitcoiners who refuse to sell, and people banks reject. Launch market is the Philippines first, then Indonesia and Vietnam, on licensed local card rails. This site is an early interactive prototype and pitch surface, not a live product yet.
+Iron is an early concept, not a live product. The site explains a proposed credit line secured by bitcoin, with collaborative 2 of 3 multisig custody as a design goal, and hosts a free browser-only demo. There is no verified issuer or card network partnership, no operating custody service, and no promise of approval. Rates, thresholds, and balances shown on the site are illustrative assumptions, not offers.
 
 ## Key links
-- [Home](https://iron.credit/): the product landing, an interactive credit-line demo (Credit view).
-- [How it works](https://iron.credit/how): deposit bitcoin, get a dollar credit line, spend, repay.
-- [Pricing](https://iron.credit/pricing): no annual fee, up to 50% LTV, no credit check, all-in pricing.
-- [The card](https://iron.credit/card): the Iron card design and specs.
-- [Score](https://iron.credit/score): how holding history and repayment feed a crypto credit score.
-- [Investors](https://iron.credit/investors): the pitch, business model, and market for the raise.
+- [Home](https://iron.credit/): concept overview, demo summary, and design lessons from the 2022 lender failures.
+- [Concept demo](https://iron.credit/demo): simulated lock, borrow, spend, repay, and liquidation flow.
+- [Credit legends](https://iron.credit/legends): research comparing the concept with historic credit companies.
+- [About](https://iron.credit/about): who operates Iron and the project status.
+- [Contact](https://iron.credit/contact): interest form and operator contact route.
+- [Privacy](https://iron.credit/privacy): what the site collects and which services process it.
 
-## About
-- Part of adam.inc, the internet portfolio of Adam Pangelinan (Anchor Marianas LLC).
-- Builder: https://adampang.com
+## Operator
+- Adam Pang: https://adampang.com

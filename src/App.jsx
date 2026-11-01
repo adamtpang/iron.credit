@@ -11,6 +11,9 @@ import Score from "./Score.jsx";
 import CardView from "./CardView.jsx";
 import Demo from "./Demo.jsx";
 import Legends from "./Legends.jsx";
+import About from "./About.jsx";
+import Contact from "./Contact.jsx";
+import Privacy from "./Privacy.jsx";
 
 const TITLES = {
   "/": "Iron · Bitcoin-backed credit concept",
@@ -24,7 +27,12 @@ const TITLES = {
   "/design": "Brand and design system · Iron",
   "/demo": "Concept demo · Iron",
   "/legends": "The greatest credit companies of all time · Iron",
+  "/about": "About Iron · Bitcoin-backed credit concept",
+  "/contact": "Contact Iron · Bitcoin-backed credit concept",
+  "/privacy": "Privacy policy · Iron",
 };
+
+
 
 export default function App() {
   const { C } = useTheme();
@@ -63,6 +71,9 @@ export default function App() {
         <Route path="/card" element={<CardView />} />
         <Route path="/demo" element={<Demo />} />
         <Route path="/legends" element={<Legends />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<ConceptLanding />} />
       </Routes>
     </div>
